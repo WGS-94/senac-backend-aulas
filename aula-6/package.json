@@ -1,0 +1,12 @@
+{
+  "name": "aula-6",
+  "version": "1.0.0",
+  "author": "Dev Will",
+  "description": "Minha primeira API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./server.js"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
