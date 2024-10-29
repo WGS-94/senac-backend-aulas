@@ -24,10 +24,5 @@ usado para desenvolvimento de servidores e aplicações escaláveis
 
  NPM (Node Package Manager)-  Gerenciador de pacotes para o Nodejs, permite a instalação de bibliotecas para expandir suas funcionalidades
 
-
-
-
-
-
- 
+ Mbora codarrrrr
 */
