@@ -22,7 +22,10 @@ usado para desenvolvimento de servidores e aplicações escaláveis
  - Possui bibliotecas e frameworks para facilitar o desenvolvimento de aplicações
  - Ideal para sistemas com muitas requisições simultâneas 
 
- 
+ NPM (Node Package Manager)-  Gerenciador de pacotes para o Nodejs, permite a instalação de bibliotecas para expandir suas funcionalidades
+
+
+
 
 
 
