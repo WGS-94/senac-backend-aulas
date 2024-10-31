@@ -42,7 +42,18 @@ http.createServer((req, res) => {
             req.on('data', chunk => {
                 body += chunk.toString();
             })
+
+            // Quando a requisição é concluída, processa o corpo da requisição
+            req.on('end', () => {
+                const dados = JSON.parse(body);
+                const respostaData = {
+                    mensagem: `Olá, ${dados.nome}! Você tem ${dados.idade} anos
+                    de idade.`
+                }
+            })
         }
+
+
     }
 
 
