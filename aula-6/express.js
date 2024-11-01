@@ -53,6 +53,6 @@ app.delete('/deletar-projeto/:id', (req, res) => {
 
 
 // Iniciar o servidor
-app.listen(9090, () => {
-    console.log('Servidor rodando na porta 9090...');
+app.listen(9091, () => {
+    console.log('Servidor rodando na porta 9091...');
 });
