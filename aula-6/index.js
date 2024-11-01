@@ -55,23 +55,7 @@ http.createServer((req, res) => {
 
 
     }
-
-
-    // res.write("Hello World");
-
-    // console.log("Requisição recebida!");
-    // console.log("Parâmetros da requisição:");
-  
-    // // Mostra o método da requisição (GET, POST, PUT, DELETE, etc.)
-    // console.log("Método:", req.method);
-  
-    // // Mostra a URL da requisição
-    // console.log("URL:", req.url);
-  
-    // // // Mostra os cabeçalhos da requisição
-    // console.log("Cabeçalhos:", req.headers);
-  
-    // res.end('Fim');
+    
 }).listen(9090, () => {
     console.log('Servidor rodando na porta 9090...');
 });
