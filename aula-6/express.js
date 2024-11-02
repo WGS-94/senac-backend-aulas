@@ -21,14 +21,16 @@ app.get('/projetos', (req, res) => {
 });
 
 // Definindo uma rota para criar um novo projeto
-app.post('/criar-projeto', (req, res)=> {
+app.post('/criar-projetos', (req, res)=> {
 
-    const { nome, descricao } = req.body;
+    // const { nome, descricao } = req.body;
+
+    // console.log(req.body)
 
     res.status(200).json([
         { id: 1, nome: 'Projeto 1', descricao: 'Descrição do projeto 1' },
         { id: 2, nome: 'Projeto 2', descricao: 'Descrição do projeto 2' },
-        { id: 3, nome: nome, descricao: descricao }
+        { id: 3, nome: 'Projeto 3', descricao: 'Descrição   do projeto 3' }
     ]);
 });
 
