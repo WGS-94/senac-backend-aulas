@@ -5,7 +5,7 @@
   "description": "Minha primeira API",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./express.js",
+    "dev": "nodemon ./express_array.js",
     "start": "node ./index.js"
   },
   "keywords": [],
