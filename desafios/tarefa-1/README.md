@@ -32,3 +32,5 @@ DELETE. Comente com suas palavras.
 
 2. Instruções para a API:
 o A API deve estar configurada para rodar na porta 5000
+
+https://github.com/calgary-nodejs/books-api/blob/master/data.json
