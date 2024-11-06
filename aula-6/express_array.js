@@ -10,7 +10,7 @@ const {v4:uuidv4} = require('uuid')
 //Configurar o servidor para aceitar requisições com dados JSON no corpo
 app.use(express.json())
 //Array onde armazenaremos temporariamenteos os projetos criados
-const projects = ['ola']
+const projects = []
 //Middleware que registra as rotas e métodos das requisições no console
 
 function logRoutes(request,response,next){
@@ -53,21 +53,63 @@ app.post('/projects', logRoutes, function(request, response) {
 // O ':id' é um parâmetro de rota, que será substituído pelo ID do projeto na URL.
 app.put('/projects/:id', function(request, response) {
     // Retorna uma resposta JSON com a lista de projetos atualizada.
+    const {id} = request.params;
+    const { name, owner } = request.body;
 
+    // Way 1
+    const projectIndex = projects.findIndex(project => project.id === id);
+    
+    if (projectIndex === -1) {
+        return response.status(404).json({ error: 'Project not found' });
+    }
+    
+    projects[projectIndex] = {
+        ...projects[projectIndex],
+        name,
+        owner
+    }
+    
+    // Way 2
+    const project = projects.find(p => p.id === id);
+
+    if (!project) {
+        return response.status(404).json({ error: 'Project not found' });
+    }
+
+    project.name = name;
+    project.owner = owner;
+
+    return response.json(project);
 });
 
 // Define uma rota para deletar um projeto específico.
 // O ':id' permite especificar qual projeto deletar pelo ID.
 app.delete('/projects/:id', function(request, response) {
+
+    const { id } = request.params;
+
+    // Way 1
+    const projectIndex = projects.findIndex(project => project.id === id);
+    if(projectIndex === -1) {
+        return response.status(404).json({ error: 'Project not found' });
+    }
+    projects.splice(projectIndex, 1);
+
+    // Way 2
+    const project = projects.find(p => p.id === id);
+    if (!project) {
+        return response.status(404).json({ error: 'Project not found' });
+    }
+    projects.splice(projects.indexOf(project), 1);
+
     // Retorna uma resposta JSON com a lista de projetos após a exclusão de um deles.
-    return response.json([
-        'Projeto 2',
-        'Projeto 3'
-    ]);
+    return response.json({ message: 'Project deleted successfully' });
+
+
 });
 
 // Inicia o servidor na porta 3000 e exibe uma mensagem no console.
 // O servidor ficará "ouvindo" solicitações HTTP nessa porta.
 app.listen(9091, () => {
-    console.log('Server started on port 3000! 🏆');
+    console.log('Server started on port 9091! 🏆');
 });
