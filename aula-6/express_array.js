@@ -79,18 +79,20 @@ app.put('/projects/:id', function(request, response) {
         name,
         owner
     }
+
+    return response.json(projects[projectIndex]);
     
     // Way 2
-    const project = projects.find(p => p.id === id);
+    // const project = projects.find(p => p.id === id);
 
-    if (!project) {
-        return response.status(404).json({ error: 'Project not found' });
-    }
+    // if (!project) {
+    //     return response.status(404).json({ error: 'Project not found' });
+    // }
 
-    project.name = name;
-    project.owner = owner;
+    // project.name = name;
+    // project.owner = owner;
 
-    return response.json(project);
+    // return response.json(project);
 });
 
 // Define uma rota para deletar um projeto específico.
@@ -101,17 +103,20 @@ app.delete('/projects/:id', function(request, response) {
 
     // Way 1
     const projectIndex = projects.findIndex(project => project.id === id);
+
     if(projectIndex === -1) {
         return response.status(404).json({ error: 'Project not found' });
     }
+
     projects.splice(projectIndex, 1);
 
     // Way 2
-    const project = projects.find(p => p.id === id);
-    if (!project) {
-        return response.status(404).json({ error: 'Project not found' });
-    }
-    projects.splice(projects.indexOf(project), 1);
+    // const project = projects.find(p => p.id === id);
+    // if (!project) {
+    //     return response.status(404).json({ error: 'Project not found' });
+    // }
+
+    // projects.splice(projects.indexOf(project), 1);
 
     // Retorna uma resposta JSON com a lista de projetos após a exclusão de um deles.
     return response.json({ message: 'Project deleted successfully' });
