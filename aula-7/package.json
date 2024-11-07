@@ -1,0 +1,20 @@
+{
+  "name": "aula-7",
+  "version": "1.0.0",
+  "author": "Dev Will",
+  "description": "Minha primeira API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./app.js",
+    "start": "node ./app.js"
+  },
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.21.1",
+    "uuid": "^11.0.2"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
