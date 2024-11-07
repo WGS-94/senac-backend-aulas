@@ -37,6 +37,12 @@ app.get('/projects', function(request, response) {
 app.post('/projects', logRoutes, function(request, response) {
     // Retorna uma resposta JSON com uma lista de projetos, incluindo o novo projeto.
     const {name, owner} = request.body
+
+    // Verificando se o nome e responsável foram fornecidos ou informados, se não retorna 400
+    if (!name || !owner) {
+        return response.status(400).json({ error: 'name or owner are required' });
+    }
+
     //Criando um novo projeto com ID único, com nome e o responsável
     const project = {
         id: uuidv4(),
@@ -55,6 +61,11 @@ app.put('/projects/:id', function(request, response) {
     // Retorna uma resposta JSON com a lista de projetos atualizada.
     const {id} = request.params;
     const { name, owner } = request.body;
+
+    // Verificando se o nome e responsável foram fornecidos ou informados, se não retorna 400
+    if (!name || !owner) {
+        return response.status(400).json({ error: 'name or owner are required' });
+    }
 
     // Way 1
     const projectIndex = projects.findIndex(project => project.id === id);
@@ -104,8 +115,6 @@ app.delete('/projects/:id', function(request, response) {
 
     // Retorna uma resposta JSON com a lista de projetos após a exclusão de um deles.
     return response.json({ message: 'Project deleted successfully' });
-
-
 });
 
 // Inicia o servidor na porta 3000 e exibe uma mensagem no console.
