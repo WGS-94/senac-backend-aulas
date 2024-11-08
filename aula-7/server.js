@@ -15,7 +15,7 @@ app.use(express.static('public'));
 
 // Renderizar templates html
 app.get('/',function(request, response){
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    response.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Inicia o servidor na porta 5000 e exibe uma mensagem no console.
