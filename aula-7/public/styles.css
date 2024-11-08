@@ -6,7 +6,6 @@
 }
 
 /* Estipo do corpo */
-
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
@@ -15,3 +14,32 @@ body {
     min-height: 100vh;
     background-color: rgb(102, 102, 235);
 }
+
+/* Estilo do container */
+.container {
+    background-color: rgb(71, 67, 67);
+    border-radius: 10px; /* Arredondamento de bordas */
+    color: aliceblue;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 40px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px; /* Tamanho / Largura máximo(a) */
+}
+
+.container p {
+    margin: 20px 0; 
+}
+
+.container button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
