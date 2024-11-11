@@ -14,18 +14,27 @@ class Carro {
         this.cor = cor;
         this.velocidade = 0;
     }
+    // Método para ligar o carro
     ligar(){
         console.log('O carro está ligado');
     }
+    // Método para acelerar o carro
     acelerar() {
         this.velocidade += 10;
     }
+    // Método para frear o carro
     freiar() {
         this.velocidade -= 10;
     }
+    // Método para exibir as informações do carro
     getVelocidade() {
         return this.velocidade;
     }
+    // Método para deslogar o carro
+    desligar(){
+        console.log('O carro está desligado');
+    }
+    // Método para exibir as informações do carro
     exibirInformacoes(){
         return `Marca: ${this.marca}, Modelo: ${this.modelo}, Ano: ${this.ano}, Cor: ${this.cor}, Velocidade: ${this.velocidade}`;
     }
