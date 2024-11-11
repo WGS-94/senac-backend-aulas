@@ -7,11 +7,15 @@
 // - Encapsulamento: esconder detalhes internos do objeto e expor apenas os métodos necessários para o uso do objeto.
 
 class Carro {
-    constructor(nome, ano, cor) {
-        this.nome = nome;
+    constructor(marca, modelo, ano, cor) {
+        this.marca = marca;
+        this.modelo = modelo;
         this.ano = ano;
         this.cor = cor;
         this.velocidade = 0;
+    }
+    ligar(){
+        console.log('O carro está ligado');
     }
     acelerar() {
         this.velocidade += 10;
@@ -21,6 +25,9 @@ class Carro {
     }
     getVelocidade() {
         return this.velocidade;
+    }
+    exibirInformacoes(){
+        return `Marca: ${this.marca}, Modelo: ${this.modelo}, Ano: ${this.ano}, Cor: ${this.cor}, Velocidade: ${this.velocidade}`;
     }
 }
 
