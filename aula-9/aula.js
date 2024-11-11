@@ -24,7 +24,7 @@ class Carro {
     }
 }
 
-// Programação Funcional 
+// ========= Programação Funcional ==============================================================
 
 // - Não utiliza variáveis
 // - Não utiliza loops
@@ -40,8 +40,25 @@ class Carro {
 // - Utiliza funções de sort (funções que retornam uma coleção de valores ordenada)
 // - Utiliza funções de reduce (funções que retornam um valor a partir de uma coleção de valores)
 
-// Programação Declarativa
+// ========== Programação Declarativa ==============================
 
 // - Descrever o que o programa deve fazer 
 // - Não se preocupa com como o programa deve fazer 
 // - Exemplo: SQL, HTML, CSS, JavaScript (com algumas exceções)
+
+// ========== Por que POO foi criado? ============================
+
+// - Para resolver problemas complexos 
+// - Para criar sistemas escaláveis
+// - Para criar sistemas flexíveis e fáceis de manter 
+// - Para criar sistemas que possam ser reutilizados
+// - Para criar sistemas que possam ser estendidos e personalizados
+
+// =========== Classes e Objetos ===============================
+
+// - Classes: são modelos ou templates que definem as características e comportamentos de um objeto
+// - Objetos: são instâncias de classes, ou seja, são criados a partir de classes e possuem suas próprias características e comportamentos
+
+// Exemplo: Uma classe Carro e um objeto Carro
+
+
