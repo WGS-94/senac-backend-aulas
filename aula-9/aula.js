@@ -40,6 +40,11 @@ class Carro {
     }
 }
 
+// Criando
+const carro = new Carro('Fiat', 'Palio', 2005, 'Az')
+
+console.log(carro)
+
 // ========= Programação Funcional ==============================================================
 
 // - Não utiliza variáveis
