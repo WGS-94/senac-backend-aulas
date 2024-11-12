@@ -73,4 +73,8 @@ class Lampada {
 
 let lampLigada = new Lampada(true, 'Branca');
 
+// Chamando os métodos
+lampLigada.ligar();
+lampLigada.desligar();
+
 console.log(lampLigada)
