@@ -83,3 +83,17 @@ console.log(carro)
 // Exemplo: Uma classe Carro e um objeto Carro
 
 
+// ========== Herança EM Javascript ===============================
+
+// - Herança: é a capacidade de um objeto herdar as características e comportamentos de outro objeto
+// - Facilita a reutilização de código e criação de estruturas mais organzadas e modulares
+
+class Funcionario extends Pessoa {
+    constructor(nome, idade, cargo) {
+        super(nome, idade)
+        this.cargo = cargo
+    }
+    mostrarCargo(){
+        console.log("Salário", this.cargo)
+    }
+}
