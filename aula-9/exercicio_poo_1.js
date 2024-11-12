@@ -43,3 +43,34 @@ cachorro.aniversario();
 
 // Exibição da idade do cachorro após o aniversário
 console.log(`${cachorro.nome} agora tem ${cachorro.idade} anos`);
+
+/* Exercício 2 - Crie uma classe chamada Lampada com os segintes atributos:
+ - estado: o estado da lampada (pode ser 'ligada' ou 'desligada')
+ - cor: a cor da lampada (exemplo: 'branca', 'amarela')
+
+ Adicione os seguintes métodos:
+ - Ligar(): Este método deve mudar o estado da lampada para 'ligada' e exibir a mensagem "A Lampada está ligada!".
+ - Desligar(): Este método deve mudar o estado da lampada para 'desligada' e exibir a mensagem "A Lampada está desligada!"
+
+ */
+
+class Lampada {
+    constructor(estado, cor){
+        this.estado = estado;
+        this.cor = cor;
+    }
+    // Método para ligar a lampada
+    ligar(){
+        this.estado = true;
+        console.log('A Lampada está ligada!');
+    }
+    // Método para desligar a lampada
+    desligar(){
+        this.estado = false;
+        console.log('A Lampada está desligada!');
+    }
+}
+
+let lampLigada = new Lampada(true, 'Branca');
+
+console.log(lampLigada)
