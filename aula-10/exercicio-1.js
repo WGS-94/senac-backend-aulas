@@ -42,10 +42,8 @@ class Pessoa {
 
 const pessoa = new Pessoa('Camburinho', 28)
 
-const dados = {
-    nome: pessoa.obterNome(),
-    idade: pessoa.obterIdade(),
-    novaIdade: pessoa.definirIdade(-30)
-}
-
-console.log('Pessoa:', JSON.stringify(dados))
+console.log('============= Pessoa ===============')
+console.log('Nome:', pessoa.obterNome())
+console.log('Idade:', pessoa.obterIdade())
+console.log('Nova idade:', pessoa.definirIdade(30))
+console.log('============ Nice ==================')
