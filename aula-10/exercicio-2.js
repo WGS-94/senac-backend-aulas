@@ -11,26 +11,38 @@
 
 class PoteDeVitamina {
     // Campo privado para armazenar a lista de vitaminas
-    #vitaninas = ["vitamina C", "vitamina D", "vitamina B12", "vitamina E", "vitamina K"];
+    #vitaminas
 
-    // constructor(vitamina){
-    //     this.#vitaninas = vitamina
-    // }
+    constructor(){
+        this.#vitaminas = ["vitamina C", "vitamina D", "vitamina B12", "vitamina E", "vitamina K"];
+    }
 
     // Método público para pegar uma vitamina do pote
     abrir(){
         // Verificar se há vitaminas no pote
-        if (this.#vitaninas.length > 0) {
+        if (this.#vitaminas.length > 0) {
+            // Retirar a primeira vitamina da lista
+            // const priVitaminaRetirada = this.#vitaminas.shift();
             // Retirar a última vitamina da lista
-            const vitaminaRetirada = this.#vitaninas.pop();
+            const ultVitaminaRetirada = this.#vitaminas.pop();
             // Retira a vitamina na posição 2
-            const retirarVitamina = this.#vitaninas[2]
-            return [retirarVitamina, vitaminaRetirada];
+            // const retirarVitamina = this.#vitaminas[3]
+
+            if(!ultVitaminaRetirada){
+                // Exibir mensagem informando que não há vitaminas no pote
+                return "Vitamina não encontrada no pote";
+            }
+
+            // Exibir mensagem informando qual vitamina foi retirada
+            return [ultVitaminaRetirada]
+            
         }
+        return "Pote vazio, não há vitaminas";
+        
     }
     // Método público para definir a idade da pessoa
     contarVitaminas(){
-        return this.#vitaninas.length
+        return this.#vitaminas.length
     }
 }
 
