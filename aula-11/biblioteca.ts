@@ -39,5 +39,25 @@ class Livro extends ItemBiblioteca {
     }
 }
 
+class Revista extends ItemBiblioteca {
+    edicao: number;
+    editora: string;
+    mesPublicacao: number;
+    anoPublicacao: number;
+    // Vamos construir a classe Revista, herdando a classe base e inicializando os atributos
+    constructor(titulo: string, autor: string, edicao: number, editora: string, mesPublicacao: number, anoPublicacao: number) {
+        super(titulo, autor); // Chamando o construtor da classe base para inicializar os atributos titulo e autor
+        this.edicao = edicao;
+        this.editora = editora;
+        this.mesPublicacao = mesPublicacao;
+        this.anoPublicacao = anoPublicacao;
+    }
+    // Metodo que exibe as informações da revista
+    exibeInformacoes(): string {
+        console.log(`${super.exibeInformacoes()}`) // Chamando o metodo da classe base para exibir as informações gerais do item
+        return `Título: ${this.titulo} - Autor: ${this.autor} - Edição: ${this.edicao} - Editora: ${this.editora} - Mês: ${this.mesPublicacao} - Ano: ${this.anoPublicacao}`;
+    }
+}
+
 // const livro = new ItemBiblioteca('O Senhor dos Anéis', 'J.R.R.Tolkien');
 // console.log(livro.exibeInformacoes()); // imprime: Título: O Senhor dos Anéis - Autor: J.R.R.Tolkien
