@@ -33,8 +33,9 @@ class Livro extends ItemBiblioteca {
         this.genero = genero;
     }
     // Metodo que exibe as informações do livro
-    exibeInformacoes() {
-        return `Título: ${this.titulo} - Autor: ${this.autor} - ISBN: ${this.ISBN} - Páginas: ${this.paginas} - Gê nero: ${this.genero}`;
+    exibeInformacoes(): string {
+        console.log(`${super.exibeInformacoes()}`) // Chamando o metodo da classe base para exibir as informações gerais do item
+        return `Título: ${this.titulo} - Autor: ${this.autor} - ISBN: ${this.ISBN} - Páginas: ${this.paginas} - Gênero: ${this.genero}`;
     }
 }
 
