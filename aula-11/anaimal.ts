@@ -38,7 +38,7 @@ class Animal {
 }
 
 // Classes mamífero que herda o Animal (aqui se tem os atributos específicos dos mamíferos)
-class mamifero extends Animal {
+class Mamifero extends Animal {
     tipoPelagem: string; // Tipo de pelagem de mamífero
     amamenta: boolean;
 
@@ -56,3 +56,34 @@ class mamifero extends Animal {
     }
 }
 
+// Classes Ave que herda da super Animal (aqui se tem os atributos específicos dos mamíferos)
+class Ave extends Animal {
+    envergaduraAsas: number;
+    tipoBico: string;
+
+    constructor(nome: string, idade: number, especie: string, raca: string, peso: number, envergaduraAsas: number,  tipoBico: string){
+        super(nome, idade, especie, raca, peso); 
+        this.envergaduraAsas = envergaduraAsas;
+        this.tipoBico = tipoBico;
+    }
+
+    emitirSom():string {
+        return ''
+    }
+}
+
+// Classes Peixe que herda da super Animal (aqui se tem os atributos específicos dos mamíferos)
+class Peixe extends Animal {
+    tamanhoAquario: number;
+    tipoAlimeto: string;
+
+    constructor(nome: string, idade: number, especie: string, raca: string, peso: number, tamanhoAquario: number,  tipoAlimeto: string){
+        super(nome, idade, especie, raca, peso); 
+        this.tamanhoAquario = tamanhoAquario;
+        this.tipoAlimeto = tipoAlimeto;
+    }
+
+    emitirSom():string {
+        return 'Peixes não emitem sons audíveis!'
+    }
+}
