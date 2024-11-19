@@ -32,8 +32,13 @@ class Animal {
         }else if(acao === 'brincar'){
             return `${this.nome} está brincando!`;
         }else {
-            return `${this.nome} está descansando!`;
+            return `${this.nome} está descansando, não sabe o que fazer!`;
         }
     }
+}
+
+// Classes mamífero que herda o Animal (aqui se tem os atributos específicos dos mamíferos)
+class mamifero extends Animal {
+    
 }
 
