@@ -87,3 +87,27 @@ class Peixe extends Animal {
         return 'Peixes não emitem sons audíveis!'
     }
 }
+
+// Função principal que simula os sistema de cadastro e interação com os animais
+function sistemaDeAnimais(){
+    const cachorro = new Mamifero("Dog", 5, "Cachorro", "Guaipeca", 30, "curta", true);
+    const papagaio = new Ave("Chico", 2, "Papagaio", "Amazônia", 50, 1.2, "Curto");
+    const baiacu = new Peixe("Nemo", 6, "Peixe", "Baiacu", 0.1, 2, "Algas");
+
+    // Exibindo as interações com cada animal
+    console.log("========== Animais ============");
+    
+    console.log(cachorro.emitirSom());
+    console.log(cachorro.interagir("brincar"));
+
+    console.log(papagaio.emitirSom());
+    console.log(cachorro.interagir("brincar"));
+
+    console.log(baiacu.emitirSom());
+    console.log(baiacu.interagir("brincar"));
+
+    console.log("========== FIM ============");
+}
+
+// Executar a função
+sistemaDeAnimais();
