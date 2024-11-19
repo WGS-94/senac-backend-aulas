@@ -39,6 +39,20 @@ class Animal {
 
 // Classes mamífero que herda o Animal (aqui se tem os atributos específicos dos mamíferos)
 class mamifero extends Animal {
-    
+    tipoPelagem: string; // Tipo de pelagem de mamífero
+    amamenta: boolean;
+
+    // O constructor do Mamífero que vai chamar o constructor pai de todos (Animal | super) par inicializar as propriedades
+    constructor(nome: string, idade: number, especie: string, raca: string, peso: number, tipoPelagem: string, amamenta: boolean){
+        super(nome, idade, especie, raca, peso); // Tudo isso vem da classe superior (Animal)
+        this.tipoPelagem = tipoPelagem;
+        this.amamenta = amamenta;
+    }
+
+    // Polimorfísmo - agora vamso subrescrever o método (mudar a sua forma, conforme a sua nececidade)
+    // subrescrever o método emitirSom() para os mamíferos, criando um só específico para esse grupo
+    emitirSom():string {
+        return "Som típico de um mamífero (latido, miado, etc)";
+    }
 }
 
