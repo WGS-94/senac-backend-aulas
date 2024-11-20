@@ -18,6 +18,26 @@
 
     Tipos de Bando de Dados:
 
-    - Relacional (MySQL, PostgreSQL)
-    - Não Relacional (MongoDB, Cassandra, NoSQL, Neo4)
+    - Relacional (MySQL, PostgreSQL, Oracle, SQL Server)
+    - Não Relacional (MongoDB, Cassandra, Neo4)
+
+    Quando utilizar um Banco de Dados:
+
+    NoSQL
+    - Alto volume de dados
+    - Não há exigência de ACID
+    - Dados dinâmicos e flexíveis (frequentemente alterados)
+    - Dados expressos e sem relação
+    - Gravações rápidas e a segurnaçã não é crítica 
+
+    SQL
+    - Dados estáticos e fixos
+    - Dados relacionados e estruturados
+    - Dados precisam ser consistentes e imutáveis 
+    - Dados precisam ser seguros e autenticados
+    - Há exigência de ACID
+
+    
+
+
 */
