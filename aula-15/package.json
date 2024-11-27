@@ -2,7 +2,7 @@
   "name": "aula-15",
   "version": "1.0.0",
   "author": "Wilson Dev",
-  "description": "",
+  "description": "CRUD básico",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
