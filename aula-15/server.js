@@ -25,6 +25,49 @@ db.connect((err) => {
     console.log('Conectado ao banco de dados!'); // Mensagem de sucesso
 });
 
+// Rota para listar todos os usuários
+app.get('/users', (req, res) => {
+    const sql = 'SELECT * FROM users'; // Comando SQL para selecionar todos os usuários
+    db.query(sql, (err, results) => {
+        if (err) throw err; // Se ocorrer um erro, lança uma exceção
+        res.json(results); // Retorna os resultados da consulta em formato JSON
+    });
+});
+
+// Rota para adicionar um novo usuário
+app.post('/users', (req, res) => {
+    const sql = 'INSERT INTO users SET ?'; // Comando SQL para inserir um novo usuário
+    const newUser = req.body; // Dados do novo usuário recebidos no corpo da requisição
+    db.query(sql, newUser, (err, result) => {
+        if (err) throw err; // Se ocorrer um erro, lança uma exceção
+        // Retorna a resposta com o ID do novo usuário e os dados
+        res.json({ id: result.insertId, ...newUser });
+    });
+});
+
+// Rota para atualizar as informações de um usuário existente
+app.put('/users/:id', (req, res) => {
+    const { id } = req.params; // Obtém o ID do usuário da URL
+    const { name, email } = req.body; // Obtém o nome e o email do corpo da requisição
+    const sql = 'UPDATE users SET name = ?, email = ? WHERE id = ?'; // Comando SQL para atualizar o usuário
+
+    db.query(sql, [name, email, id], (err, result) => {
+        if (err) throw err; // Se ocorrer um erro, lança uma exceção
+        res.json({ message: 'Usuário atualizado com sucesso!' }); // Retorna uma mensagem de sucesso
+    });
+});
+
+// Rota para deletar um usuário
+app.delete('/users/:id', (req, res) => {
+    const { id } = req.params; // Obtém o ID do usuário da URL
+    const sql = 'DELETE FROM users WHERE id = ?'; // Comando SQL para deletar o usuário
+
+    db.query(sql, [id], (err, result) => {
+        if (err) throw err; // Se ocorrer um erro, lança uma exceção
+        res.json({ message: 'Usuário deletado com sucesso!' }); // Retorna uma mensagem de sucesso
+    });
+});
+
 // Obtém a porta do ambiente ou usa 3000 como padrão
 const PORT = 3000;
 
