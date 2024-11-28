@@ -15,7 +15,7 @@ app.use(express.static('public'));
 const db = mysql.createConnection({
   host: '127.0.0.1', // Endereço do servidor do banco de dados
   user: 'root', // Nome do usuário do banco de dados
-  password: '1234', // Senha do usuário do banco de dados (alterar conforme a configuração)
+  password: '', // Senha do usuário do banco de dados (alterar conforme a configuração)
   database: 'crud_example', // Nome do banco de dados a ser utilizado
 });
 
