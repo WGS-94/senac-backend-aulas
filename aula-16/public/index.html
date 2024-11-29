@@ -8,22 +8,53 @@
     /* Estilo geral da página */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
-      background-color: #f4f4f9; /* Cor de fundo clara */
+      background-color: #f2f2f2; /* Cor de fundo clara */
       color: #333; /* Cor do texto */
       margin: 0; /* Remove margens padrão */
-      padding: 20px; /* Espaçamento interno */
+       /*padding: 20px; Espaçamento interno */
     }
-    h1, h2 {
+    h1 {
+      color: #f2f2f2; /* Cor dos títulos */
+    }
+    h2 {
       color: #2c3e50; /* Cor dos títulos */
+    }
+    header {
+      background: #0d0d0d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 11rem;
+      position: relative;
+      z-index: 1;
+      /* min-width: 376px; */
     }
     /* Container principal */
     .container {
       max-width: 800px; /* Largura máxima */
-      margin: auto; /* Centraliza o container */
+      width: 100%; /* Permite que o container ocupe até 100% da largura da tela */
       background-color: #ffffff; /* Cor de fundo branca */
       padding: 20px; /* Espaçamento interno */
       border-radius: 8px; /* Bordas arredondadas */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      /*margin-top: -3rem;  Ajusta a posição vertical se necessário */
+      z-index: 2; /* Garante que o container fique acima de outros elementos */
+      position: fixed; /* Fixa o container na tela */
+      top: 20%; /* Alinha ao topo da tela */
+      left: 50%; /* Posiciona o container 50% a partir da esquerda */
+      transform: translateX(-50%); /* Move o container para a esquerda para centralizá-lo */
+    }
+
+    /* Container principal */
+    .content {
+      max-width: 800px; /* Largura máxima */
+      width: 100%; /* Permite que o conteúdo ocupe até 100% da largura da tela */
+      margin: auto; /* Centraliza o conteúdo */
+      background-color: #ffffff; /* Cor de fundo branca */
+      padding: 20px; /* Espaçamento interno */
+      border-radius: 8px; /* Bordas arredondadas */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      margin-top: 15rem; /* Espaço suficiente para que o conteúdo fique abaixo do container */
     }
     /* Estilo da lista de usuários */
     ul {
@@ -140,15 +171,19 @@
   </script>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>CRUD Usuários</h1>
-    <ul id="users-list"></ul> <!-- Lista de usuários -->
+  </header>
+  <div class="container">
     <h2>Adicionar Usuário</h2>
     <div class="form-group">
       <input type="text" id="name" placeholder="Nome"> <!-- Campo de entrada para o nome -->
       <input type="email" id="email" placeholder="Email"> <!-- Campo de entrada para o email -->
       <button onclick="addUser()">Adicionar</button> <!-- Botão para adicionar um novo usuário -->
     </div>
+  </div>
+  <div class="content">
+    <ul id="users-list"></ul> <!-- Lista de usuários -->
   </div>
 </body>
 </html>

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* Estilo geral da página */
+body {
+    background:  #1a1a1a;
+    color:  #f2f2f2;
+    width: 100%;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+    color: #2c3e50; /* Cor dos títulos */
+}
+/* Container principal */
+.container {
+    max-width: 800px; /* Largura máxima */
+    margin: auto; /* Centraliza o container */
+    background-color: #ffffff; /* Cor de fundo branca */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.header {
+    background: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 11rem;
+    position: relative;
+    /* min-width: 376px; */
+  }
+/* Estilo da lista de usuários */
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+li {
+    display: flex; /* Exibe os itens da lista em linha */
+    justify-content: space-between; /* Espaça os elementos horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    background-color: #e0f7fa; /* Cor de fundo suave */
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  /* Estilo dos botões */
+  button {
+    background-color: #3498db; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    padding: 8px 12px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Efeito de transição suave */
+  }
+  button:hover {
+    background-color: #2980b9; /* Cor de fundo ao passar o mouse */
+  }
+  /* Estilo dos campos de entrada */
+  input[type="text"],
+  input[type="email"] {
+    width: 100%; /* Largura total do elemento */
+    padding: 8px; /* Espaçamento interno */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-sizing: border-box; /* Inclui o preenchimento na largura total */
+  }
+  /* Estilo do grupo de campos de entrada */
+  .form-group {
+    display: flex; /* Exibe em linha */
+    flex-direction: column; /* Organiza em coluna */
+  }
+  .form-group button {
+    margin-top: 10px; /* Espaçamento superior */
+    align-self: flex-start; /* Alinha o botão à esquerda */
+  }
